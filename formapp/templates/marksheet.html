@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}marksheet{% endblock %}
+
+{% block heading %}
+Simple marksheet
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <label>Subject1</label>
+    <input type="text" name="subject1" class="form-control">
+    <label>Subject2</label>
+    <input type="text" name="subject2" class="form-control">
+    <label>Subject3</label>
+    <input type="text" name="subject3" class="form-control">
+    <label>Subject4</label>
+    <input type="text" name="subject4" class="form-control">
+    <label>Subject5</label>
+    <input type="text" name="subject5" class="form-control">
+    <input type="submit" value="Submit" name="submit"><br>
+    <label>Total Marks</label>
+    <input type="text" value="{{total}}" name="totalmarks" class="form-control">
+    <label>Percentage of Marks</label>
+    <input type="text" value="{{per}}" name="percentage" class="form-control">
+    <label>Division</label>
+    <input type="text" value="{{div}}" name="division" class="form-control">
+
+
+</form>
+{% endblock %}
